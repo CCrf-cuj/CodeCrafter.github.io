@@ -8,9 +8,10 @@
     /* Gradient background color */
     background: linear-gradient(to bottom, #d2edfc ,#082062);
     /* Ensure the gradient covers the entire viewport */
-    
-    margin:0px;
+    height:100%;
+    margin:0;
     background-repeat: no-repeat;
+    background-attachment: fixed;
      /* Optional: Cover the entire viewport with the gradient */
     /* Optonal: Center content vertically and horizontally */
   }
@@ -196,6 +197,10 @@
   
   /* Responsive styles */
   @media (max-width: 768px) {
+    html,
+    body {
+      background-size: cover;
+    }
     /* Change the grid layout for smaller screens */
     .top-body {
       grid-template-columns: 1fr;
