@@ -25,8 +25,10 @@
   
   /* Navbar styles */
   .navbar {
-    display: flex;
+    
+    display: grid;
     justify-content: flex-end;
+    grid-template-columns: 1fr 2fr;
     align-items: center;
     background-color: #0c000000;
     padding: 10px;
@@ -34,6 +36,15 @@
     top: 0;
     width: 100%;
   }
+  .navleft{
+    display: flex;
+    justify-content:left
+  }
+  .navright{
+    display: flex;
+    justify-content: flex-end;
+  }
+  
   
   .navbar a {
     color: rgb(0, 0, 0);
