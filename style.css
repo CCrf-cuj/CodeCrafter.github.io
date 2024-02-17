@@ -36,9 +36,10 @@
     top: 0;
     width: 100%;
   }
-  .navleft{
+ .navleft{
     display: flex;
-    justify-content:left
+    justify-content:left;
+    padding-left: 20px;
   }
   .navright{
     display: flex;
