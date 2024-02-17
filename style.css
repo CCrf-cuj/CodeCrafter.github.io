@@ -236,6 +236,14 @@
     body {
       background-size: cover;
     }
+       .navbar {
+      justify-content: center; /* Center align links on smaller screens */
+      background-color: #0c000000; /* Darken background color */
+  }
+
+  .navbar a {
+      margin: 0 10px; /* Adjust margin for smaller screens */
+  }
     /* Change the grid layout for smaller screens */
     .top-body {
       grid-template-columns: 1fr;
