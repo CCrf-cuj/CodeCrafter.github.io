@@ -1,0 +1,221 @@
+/* General styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body{
+    /* Gradient background color */
+    background: linear-gradient(to bottom, #d2edfc ,#082062);
+    /* Ensure the gradient covers the entire viewport */
+    
+    margin:0px;
+    background-repeat: no-repeat;
+     /* Optional: Cover the entire viewport with the gradient */
+    /* Optonal: Center content vertically and horizontally */
+  }
+  
+  /* Container styles */
+  .Container {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    height: 100vh;
+  }
+  
+  /* Navbar styles */
+  .navbar {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: #0c000000;
+    padding: 10px;
+    position: fixed; /* Make the navbar fixed */
+    top: 0;
+    width: 100%;
+  }
+  
+  .navbar a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    margin-left: 20px;
+    border-radius: 5%; /* Add border radius to the links */
+  }
+  
+  .navbar a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow:0 0 15px rgb(10, 10, 10);
+  }
+  
+  /* Top-body styles */
+  .top-body {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    align-items: center;
+    background-color: #f1f1f100;
+    margin-top: 50px; /* Add a top margin to avoid navbar overlay */
+  }
+  
+  .Logo {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .Logo img {
+    width: 150px;
+    height: 150px;
+    border-radius: 15%; /* Add border radius to the logo */
+    border: 2px solid black; /* Add border to the logo */
+  }
+  
+  .Clubname {
+    display: flex;
+    justify-content:center;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .Clubname:hover h2{
+        text-shadow: 0 0 10px rgba(252, 0, 0, 0.5); /* Add text shadow on hover */
+        color: rgb(255, 253, 253); /* Change the text color when container is hovered */
+          transform: scale(1.3); /* Increase the size of the text on hover */
+          font-size: 42px;
+  }        
+  
+  /* Middle-body styles */
+  .middle-body {
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .Quicklink-coloum {
+    background-color: #f1f1f100;
+    padding: 20px;
+  }
+  
+  .About-coloum {
+    background-color: #f1f1f100;
+    padding: 20px;
+  }
+  
+  .Middle-coloum {
+    background-color: rgba(255, 255, 255, 0);
+    padding: 20px;
+  }
+  
+  .Right-section {
+    background-color: #f1f1f100;
+    padding: 20px;
+  }
+  
+  /* Lower-section styles */
+  .lower-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .image-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .image-section img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+  }
+  
+  .details-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .details-section pre {
+    background-color: #333333;
+    color: white;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  /* Footer styles */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    background-color: #33333300;
+    color: white;
+    padding: 10px;
+  }
+  
+  .social-connection {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-connection img {
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+  }
+  
+  .University {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .University img {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .University p {
+    margin-left: 10px;
+  }
+  
+  .University a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .University a:hover {
+    color: yellow;
+  }
+  
+  .copyrigh {
+    display: flex;
+    justify-content: center;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    /* Change the grid layout for smaller screens */
+    .top-body {
+      grid-template-columns: 1fr;
+    }
+  
+    .middle-body {
+      grid-template-columns: 1fr;
+    }
+  
+    .lower-section {
+      grid-template-columns: 1fr;
+    }
+  
+    /* Reduce the font size for smaller screens */
+    .Clubname {
+      font-size: 24px;
+    }
+  
+    .details-section pre {
+      font-size: 12px;
+    }
+  }
+  
