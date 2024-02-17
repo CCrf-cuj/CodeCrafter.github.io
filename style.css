@@ -165,7 +165,8 @@
   
   .social-link {
       display: inline-block;
-      
+      width: 50px;
+    height: 50px;
       margin: 0 10px;
       color: #d2edfc; /* You can style the color of the icons here */
       font-size: 24px; /* Adjust the size of the icons as needed */
@@ -173,12 +174,26 @@
   }
   
   .social-link:hover {
-      transform: scale(1.2);
+
+      transform: scale(1.5);
   }
-  
+  /* Style for LinkedIn icon */
+.linkedin:hover {
+  color: #0077b5; /* Change to LinkedIn color on hover */
+}
+
+/* Style for Instagram icon */
+.instagram:hover {
+  color: #bc2a8d; /* Change to Instagram color on hover */
+}
+
+/* Style for GitHub icon */
+.github:hover {
+  color: #000000; /* Change to GitHub color on hover */
+}
   .social-connection img {
-    width: 50px;
-    height: 50px;
+    width: 10px;
+    height: 10px;
     margin: 10px;
     
   }
