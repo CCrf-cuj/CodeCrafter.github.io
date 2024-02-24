@@ -101,9 +101,16 @@
   }
   
   .Middle-coloum {
-    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    flex-wrap:wrap;
+    grid-template-columns: 1fr 1fr;
+    justify-content: left;
+    align-items: flex-start;
+    background-color: #f1f1f100;
     padding: 20px;
-  }
+    margin-left : 20px;
+}
+
   
   .Right-section {
     background-color: #f1f1f100;
@@ -229,6 +236,25 @@
   .copyright p {
     font-size: 12px; /* Adjust the font size as needed */
 }
+#output {
+    font-family: monospace;
+    font-size: 24px;
+    text-align: left; /* Align the text to the left */
+  }
+  
+  #word {
+    color: blue; /* Change the color here */
+  }
+  
+  .blink {
+    animation: blink-animation 0.2s infinite;
+  }
+  
+  @keyframes blink-animation {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+  }
+  
   /* Responsive styles */
   @media (max-width: 768px) {
     html,
