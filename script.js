@@ -1,26 +1,57 @@
-function printHelloWithBlinking() {
-    const output = document.getElementById("word");
-    const word = "We code to Craft!!";
-    let index = 0;
-  
-    function printWithBlinkingUnderscore() {
-      const printInterval = setInterval(() => {
-        if (index < word.length) {
-          output.innerHTML = word.substring(0, index) + '<span class="blink">_</span>';
-          index++;
+function printSentenceWithBlinking(sentences) {
+  const output = document.getElementById("word");
+  let sentenceIndex = 0;
+  let index = 0;
+  let printInterval;
+
+  function printWithBlinkingUnderscore() {
+    const currentSentence = sentences[sentenceIndex];
+    printInterval = setInterval(() => {
+      if (index <= currentSentence.length) {
+        if (index < currentSentence.length) {
+          output.innerHTML = currentSentence.substring(0, index) + '<span class="blink">_</span>';
         } else {
-          output.innerHTML = word + '<span class="blink">_</span>';
-          clearInterval(printInterval);
-          setTimeout(() => {
-            index = 0;
-            printWithBlinkingUnderscore(); // Call the function again after a delay
-          }, 2000); // Adjust the delay between iterations (2 seconds in this case)
+          output.innerHTML = currentSentence.substring(0, index); // Ensure the full sentence is displayed before backspacing
         }
-      }, 200); // Adjust interval for faster printing
-    }
-  
-    printWithBlinkingUnderscore(); // Start the initial printing
+        index++;
+      } else {
+        clearInterval(printInterval);
+        setTimeout(() => {
+          removeBackward(currentSentence);
+        }, 500); // Delay before backspacing starts
+      }
+    }, 200); // Adjust interval for faster printing
   }
-  
-  printHelloWithBlinking(); // Start the loop
-  
+
+  function removeBackward(sentence) {
+    printInterval = setInterval(() => {
+      if (index >= 0) {
+        output.innerHTML = sentence.substring(0, index) + '<span class="blink">_</span>';
+        index--;
+      } else {
+        clearInterval(printInterval);
+        // Move to the next sentence
+        sentenceIndex++;
+        if (sentenceIndex >= sentences.length) {
+          sentenceIndex = 0; // Reset to the first sentence
+        }
+        setTimeout(() => {
+          index = 0;
+          printWithBlinkingUnderscore(); // Print the next sentence
+        }, 1000); // Delay before printing the next sentence
+      }
+    }, 100); // Adjust interval for faster backspacing
+  }
+
+  printWithBlinkingUnderscore(); // Start the initial printing
+}
+
+const sentences = [
+  "We code to Craft!!",
+  "We code to Learn!!",
+  "We code to Grow!!",
+  "CU_Jharkhand"
+  // Add more sentences as needed
+];
+
+printSentenceWithBlinking(sentences); // Call the function with the array of sentences
