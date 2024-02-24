@@ -73,13 +73,6 @@
     justify-content: center;
   }
   
-  .Logo img {
-    width: 150px;
-    height: 150px;
-    border-radius: 15%; /* Add border radius to the logo */
-    border: 2px solid black; /* Add border to the logo */
-  }
-  
   .Clubname {
     display: flex;
     justify-content:center;
