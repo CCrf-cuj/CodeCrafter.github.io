@@ -95,9 +95,11 @@
     padding: 20px;
   }
   
-  .About-coloum {
-  background-color: rgba(102, 188, 232, 0.319); /* 40% transparent gray color */
-  padding: 20px;
+.About-coloum {
+background-color: rgba(102, 188, 232, 0.319); /* 40% transparent gray color */
+padding: 20px;
+border: #000000 0px solid;
+border-radius: 25px;
 }
 
 .About-coloum:hover {
