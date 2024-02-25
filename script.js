@@ -47,11 +47,30 @@ function printSentenceWithBlinking(sentences) {
 }
 
 const sentences = [
+  "CU_Jharkhand",
   "We code to Craft!!",
   "We code to Learn!!",
-  "We code to Grow!!",
-  "CU_Jharkhand"
+  "We code to Grow!!"
+  
   // Add more sentences as needed
 ];
 
 printSentenceWithBlinking(sentences); // Call the function with the array of sentences
+
+
+// Function to switch to Members content
+document.getElementById('membersButton').addEventListener('click', function() {
+  document.getElementById('alumniContent').classList.remove('active');
+  document.getElementById('membersContent').classList.add('active');
+});
+
+// Function to switch to Alumni content
+document.getElementById('alumniButton').addEventListener('click', function() {
+  document.getElementById('membersContent').classList.remove('active');
+  document.getElementById('alumniContent').classList.add('active');
+});
+
+// Set the Members content to be visible by default
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('membersContent').classList.add('active');
+});
