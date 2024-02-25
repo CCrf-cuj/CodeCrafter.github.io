@@ -101,6 +101,7 @@ background-color: rgba(102, 189, 232, 0); /* 40% transparent gray color */
 padding: 20px;
 border: #000000 0px solid;
 border-radius: 25px;
+transition: background-color 1s ease;
 }
 
 .About-column:hover {
