@@ -96,7 +96,7 @@ body{
 }
 
 .About-column {
-  font-size: 20px;
+font-size: 20px;
 background-color: rgba(102, 189, 232, 0); /* 40% transparent gray color */
 padding: 20px;
 border: #000000 0px solid;
@@ -105,7 +105,7 @@ transition: background-color 1s ease;
 }
 
 .About-column:hover {
-background-color: rgba(167, 215, 243, 0.501); /* Red color on hover */
+background-color: rgba(149, 182, 201, 0.501); /* Red color on hover */
 }
 
 .Middle-column {
@@ -163,18 +163,17 @@ background-color: rgba(167, 215, 243, 0.501); /* Red color on hover */
 /* Footer styles */
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: flex-end;
   background-color: #33333300;
   color: white;
-  padding: 10px;
+  
 }
 
 .social-connection {
     display: flex;
     justify-content: center;
-    margin: 20px;
-    padding: 10px;
+    
 }
 
 .social-link {
@@ -237,9 +236,10 @@ color: #000000; /* Change to GitHub color on hover */
 
 .copyright {
   display: flex;
-  justify-content: left;
+  justify-content: right;
   color: antiquewhite;
   margin-top: 10px;
+  padding-right: 5px;
 }
 .copyright p {
   font-size: 12px; /* Adjust the font size as needed */
