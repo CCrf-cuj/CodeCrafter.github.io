@@ -96,9 +96,13 @@
   }
   
   .About-coloum {
-    background-color: #f1f1f100;
-    padding: 20px;
-  }
+  background-color: rgba(102, 188, 232, 0.319); /* 40% transparent gray color */
+  padding: 20px;
+}
+
+.About-coloum:hover {
+  background-color: rgba(167, 215, 243, 0.501); /* Red color on hover */
+}
   
   .Middle-coloum {
     display: flex;
