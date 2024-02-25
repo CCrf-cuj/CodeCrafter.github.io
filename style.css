@@ -163,8 +163,8 @@ background-color: rgba(149, 182, 201, 0.501); /* Red color on hover */
 /* Footer styles */
 footer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: flex-end;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  align-items: center;
   background-color: #33333300;
   color: white;
   
@@ -216,9 +216,10 @@ color: #000000; /* Change to GitHub color on hover */
   justify-content: center;
 }
 
+
 .University img {
-  width: 100px;
-  height: 100px;
+  /* width: 100px; */
+  height: 40px;
 }
 
 .University p {
@@ -233,7 +234,10 @@ color: #000000; /* Change to GitHub color on hover */
 .University a:hover {
   color: yellow;
 }
-
+.DCSE  a {
+  color: white; /* Default color for the link */
+  text-decoration: none; /* Remove underline */
+}
 .copyright {
   display: flex;
   justify-content: right;
