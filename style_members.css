@@ -209,6 +209,8 @@ color: #000000; /* Change to GitHub color on hover */
   color: yellow;
 }
 .DCSE  a {
+    display: flex;
+  justify-content: center;
   color: white; /* Default color for the link */
   text-decoration: none; /* Remove underline */
 }
