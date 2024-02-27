@@ -5,7 +5,7 @@
     padding: 0;
 }
 body {
-    background: linear-gradient(to bottom, #d2edfc ,#082062);
+    background: linear-gradient(to bottom, #ffc6c6 ,#082062);
     height: 100%;
     margin: 0;
     background-repeat: no-repeat;
@@ -21,7 +21,7 @@ body {
     justify-content: flex-end;
     grid-template-columns: 1fr 2fr;
     align-items: center;
-    background-color: #0c000000;
+    background:linear-gradient(to bottom, #ffc6c6 ,#f7c0c0 ,#f7bfbf ,#e1b7b718);
     padding: 10px;
     position: fixed;
     top: 0;
