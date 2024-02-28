@@ -90,10 +90,7 @@ body{
   padding: 20px;
 }
 
-.Quicklink-column {
-  background-color: #f1f1f100;
-  padding: 20px;
-}
+
 
 .About-column {
 font-size: 20px;
@@ -270,7 +267,7 @@ color: #000000; /* Change to GitHub color on hover */
 }
 
 /* Responsive styles */
-@media (max-width: 768 px) {
+@media (max-width: 768px) {
   html,
   body {
     background-size: cover;
@@ -306,4 +303,5 @@ color: #000000; /* Change to GitHub color on hover */
   }
   
 }
+
 
