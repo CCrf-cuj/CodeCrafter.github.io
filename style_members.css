@@ -235,7 +235,7 @@ color: #000000; /* Change to GitHub color on hover */
   font-size: 12px; /* Adjust the font size as needed */
 }
   /* Responsive styles */
-  @media (max-width: 1px) {
+  @media (max-width: 768px) {
     html,
     body {
       background-size: cover;
