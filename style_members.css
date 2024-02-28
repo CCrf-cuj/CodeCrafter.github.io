@@ -75,7 +75,7 @@ body {
 
 .middle-body {
   display: grid;
-  grid-template-rows: 0.3fr 1fr ;
+  grid-template-rows:1fr ;
   height: 100%;
 }
 
