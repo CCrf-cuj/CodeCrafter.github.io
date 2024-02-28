@@ -270,7 +270,7 @@ color: #000000; /* Change to GitHub color on hover */
 }
 
 /* Responsive styles */
-@media (max-width: 1px) {
+@media (max-width: 768 px) {
   html,
   body {
     background-size: cover;
