@@ -48,9 +48,7 @@ function printSentenceWithBlinking(sentences) {
 
 const sentences = [
   "CU_Jharkhand",
-  "We code to Craft!!",
-  "We code to Learn!!",
-  "We code to Grow!!"
+  "Let's go out of the CodeSpace"
   
   // Add more sentences as needed
 ];
