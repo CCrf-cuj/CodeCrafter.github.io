@@ -74,13 +74,17 @@ body{
 }
 
 .Clubname {
-  display: flex;
-  justify-content:center;
+  display: grid;
+  grid-template-rows: 2fr 1fr;
+
   font-size: 28px;
   font-weight: bold;
   color: #333;
 }
-
+.text{
+  display: flex;
+  justify-content: center;
+}
 
 /* Middle-body styles */
 .middle-body {
@@ -143,6 +147,17 @@ background-color: rgba(149, 182, 201, 0.501); /* Red color on hover */
   margin: 10px;
 }
 
+rect {
+  fill-opacity: 1; /* Sets the opacity of the fill */
+  stroke: rgba(255, 0, 0, 0); /* Sets the color of the stroke (border) */
+  stroke-width: 2; /* Sets the width of the stroke */
+}
+
+/* Hover effect */
+rect:hover {
+  fill-opacity: 1; /* Increase opacity on hover */
+  transform: scale(1.01); /* Increase stroke width on hover */
+}
 .details-section {
   display: flex;
   flex-direction: column;
@@ -247,9 +262,11 @@ color: #000000; /* Change to GitHub color on hover */
   font-size: 12px; /* Adjust the font size as needed */
 }
 #output {
+  display: flex;
+  justify-content: center;
   font-family: monospace;
   font-weight: normal;
-  font-size: 24px;
+  font-size: 20px;
   text-align: left; /* Align the text to the left */
 }
 
