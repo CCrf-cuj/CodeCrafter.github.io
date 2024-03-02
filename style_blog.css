@@ -84,7 +84,7 @@
     background-color: #f1f1f100;
     margin-top: 20px; /* Add a top margin to avoid navbar overlay */
   }
-.middle-section{
+.box{
     max-width: 800px;
             margin: 20px auto;
             padding: 20px;
