@@ -138,7 +138,11 @@ body {
   color: #fffffff4;
   background-color: #00233473;
 }
-
+.custom-link {
+  text-decoration: none; /* Remove underline */
+  color: #000000; /* Change font color to red */
+  /* Additional styles for the link */
+}
 /* Alumni styles */
 .alumni-row {
   display: none;
