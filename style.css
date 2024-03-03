@@ -127,7 +127,6 @@ background-color: rgba(149, 182, 201, 0.501); /* Red color on hover */
   border-radius: 8px; /* Rounded corners */
   position: relative; /* Ensure relative positioning for absolutely positioned elements */
 }
-
 #slideshow {
   position: relative;
   max-width: 100%;
