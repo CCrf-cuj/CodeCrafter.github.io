@@ -55,3 +55,33 @@ const sentences = [
 
 printSentenceWithBlinking(sentences); // Call the function with the array of sentences
 
+// for middle column
+var slides = document.querySelectorAll('.slide');
+var currentSlide = 0;
+
+// Hide all slides except the first one
+for (var i = 1; i < slides.length; i++) {
+    slides[i].style.display = 'none';
+}
+
+var slideInterval = setInterval(nextSlide, 2000); // Change slide every 2 seconds
+
+function nextSlide() {
+    // Hide the current slide
+    slides[currentSlide].style.display = 'none';
+
+    // Move to the next slide
+    currentSlide = (currentSlide + 1) % slides.length;
+
+    // Check if the image loads successfully
+    var img = new Image();
+    img.onload = function() {
+        // Show the slide if the image loads successfully
+        slides[currentSlide].style.display = 'block';
+    };
+    img.onerror = function() {
+        // If the image fails to load, move to the next slide
+        nextSlide();
+    };
+    img.src = slides[currentSlide].src;
+}
