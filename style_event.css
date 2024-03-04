@@ -80,7 +80,11 @@
     font-weight: bold;
     color: #333;
   }
-  
+
+.text{
+  display: flex;
+  justify-content: center;
+}
   
   /* Middle-body styles */
   .middle-body {
@@ -176,7 +180,19 @@
     height: 100px;
     margin: 10px;
   }
-  
+
+rect {
+  fill-opacity: 1; /* Sets the opacity of the fill */
+  stroke: rgba(255, 0, 0, 0); /* Sets the color of the stroke (border) */
+  stroke-width: 2; /* Sets the width of the stroke */
+}
+
+/* Hover effect */
+rect:hover {
+  fill-opacity: 1; /* Increase opacity on hover */
+  transform: scale(1.01); /* Increase stroke width on hover */
+}
+
   .details-section {
     display: flex;
     flex-direction: column;
