@@ -81,12 +81,39 @@ body {
 
 .default-content {
     padding: 20px;
-    border: 1px solid #ccc;
+    border: 1px solid #ffffff00;
     background-color: #ffffff00;
     border-radius: 15px;
     max-width: 80%; /* Adjust width as needed */
     margin: auto;
 }
+.default-content1 {
+  padding: 0;
+  border:0px solid #ccc;
+  background-color: #ffffff00;
+  border-radius: 15px;
+  max-width: 80%; /* Adjust width as needed */
+  margin: auto;
+}
+.default-content2 {
+  padding: 40px;
+  border: 1px solid #ccc;
+  background-color: #ffffff00;
+  border-radius: 15px;
+  font-size: 20px;
+   /* Adjust width as needed */
+ 
+}
+.ftitle
+{
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  font-size: 24px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
 .transparent-button.active-button h1 {
   color: white; /* Change the color to white */
   text-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Add a black shadow */
