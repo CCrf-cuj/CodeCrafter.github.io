@@ -56,6 +56,45 @@ const sentences = [
 printSentenceWithBlinking(sentences); // Call the function with the array of sentences
 
 // for middle column
+
+//error (page reload not fixed)[
+// var slides = document.querySelectorAll('.slide');
+// var currentSlide = 0;
+
+// // Hide all slides except the first one
+// for (var i = 1; i < slides.length; i++) {
+//     slides[i].style.display = 'none';
+// }
+
+// var slideInterval = setInterval(nextSlide, 2000); // Change slide every 2 seconds
+
+// function nextSlide() {
+//     // Hide the current slide
+//     slides[currentSlide].style.display = 'none';
+
+//     // Move to the next slide
+//     currentSlide = (currentSlide + 1) % slides.length;
+
+//     // Check if the image loads successfully
+//     var img = new Image();
+//     img.onload = function() {
+//         // Show the slide if the image loads successfully
+//         slides[currentSlide].style.display = 'block';
+//     };
+//     img.onerror = function() {
+//         // If the image fails to load, move to the next slide
+//         nextSlide();
+//     };
+//     img.src = slides[currentSlide].src;
+// }
+//]
+//
+
+
+// for middle column
+
+//error (page reload fixed)[
+
 var slides = document.querySelectorAll('.slide');
 var currentSlide = 0;
 
@@ -73,15 +112,29 @@ function nextSlide() {
     // Move to the next slide
     currentSlide = (currentSlide + 1) % slides.length;
 
-    // Check if the image loads successfully
+    // Create a new Image object
     var img = new Image();
+
+    // Set up onload event handler to display the slide after image load
     img.onload = function() {
-        // Show the slide if the image loads successfully
+        // Show the slide after the image has loaded successfully
         slides[currentSlide].style.display = 'block';
     };
-    img.onerror = function() {
-        // If the image fails to load, move to the next slide
+
+    // Set up onerror event handler to handle image loading errors
+    img.onerror = function(e) {
+        // If the image fails to load, prevent the default action (e.g., page reload)
+        e.preventDefault();
+        // Log the error for debugging purposes
+        console.error('Failed to load image:', slides[currentSlide].src);
+        // Move to the next slide
         nextSlide();
     };
+
+    // Set the src attribute of the image
     img.src = slides[currentSlide].src;
 }
+
+
+
+//]
