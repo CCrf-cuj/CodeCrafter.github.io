@@ -84,7 +84,7 @@ body {
     border: 1px solid #ffffff00;
     background-color: #ffffff00;
     border-radius: 15px;
-    max-width: 80%; /* Adjust width as needed */
+    max-width: 100%; /* Adjust width as needed */
     margin: auto;
 }
 .default-content1 {
@@ -92,7 +92,7 @@ body {
   border:0px solid #ccc;
   background-color: #ffffff00;
   border-radius: 15px;
-  max-width: 80%; /* Adjust width as needed */
+  max-width: 100%; /* Adjust width as needed */
   margin: auto;
 }
 .default-content2 {
