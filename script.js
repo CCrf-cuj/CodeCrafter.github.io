@@ -147,8 +147,10 @@ printSentenceWithBlinking(sentences); // Call the function with the array of sen
 
 //error (page reload fixed)[
 
+// Select all slide elements
 var slides = document.querySelectorAll('.slide');
 var currentSlide = 0;
+var slideInterval;
 
 // Hide all slides except the first one
 for (var i = 1; i < slides.length; i++) {
@@ -165,16 +167,13 @@ function nextSlide() {
 
     // Show the next slide
     slides[currentSlide].style.display = 'block';
-
-    // Reset the slideInterval to prevent multiple intervals running concurrently
-    clearInterval(slideInterval);
-
-    // Set the slideInterval again after changing slides
-    slideInterval = setInterval(nextSlide, 2000);
 }
 
 // Initial call to nextSlide to start the slideshow
 nextSlide();
+
+// Set the slideInterval to change slides automatically every 2 seconds
+slideInterval = setInterval(nextSlide, 2000);
 
 // Event listener to handle window resize
 window.addEventListener('resize', function() {
@@ -183,7 +182,7 @@ window.addEventListener('resize', function() {
 
     // Hide all slides except the first one
     for (var i = 0; i < slides.length; i++) {
-        slides[i].style.display = (i === currentSlide) ? 'block' : 'none';
+        slides[i].style.display = (i === 0) ? 'block' : 'none';
     }
 
     // Reset the slideInterval
