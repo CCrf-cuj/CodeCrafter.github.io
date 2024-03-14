@@ -93,6 +93,58 @@ printSentenceWithBlinking(sentences); // Call the function with the array of sen
 
 // for middle column
 
+//error (page reload not fixed)[
+
+// var slides = document.querySelectorAll('.slide');
+// var currentSlide = 0;
+
+// // Hide all slides except the first one
+// for (var i = 1; i < slides.length; i++) {
+//     slides[i].style.display = 'none';
+// }
+
+// var slideInterval = setInterval(nextSlide, 2000); // Change slide every 2 seconds
+
+// function nextSlide() {
+//     // Hide the current slide
+//     slides[currentSlide].style.display = 'none';
+
+//     // Move to the next slide
+//     currentSlide = (currentSlide + 1) % slides.length;
+
+//     // Create a new Image object
+//     var img = new Image();
+
+//     // Set up onload event handler to display the slide after image load
+//     img.onload = function() {
+//         // Show the slide after the image has loaded successfully
+//         slides[currentSlide].style.display = 'block';
+//     };
+
+//     // Set up onerror event handler to handle image loading errors
+//     img.onerror = function(e) {
+//         // If the image fails to load, prevent the default action (e.g., page reload)
+//         e.preventDefault();
+//         // Log the error for debugging purposes
+//         console.error('Failed to load image:', slides[currentSlide].src);
+//         // Move to the next slide
+//         nextSlide();
+//     };
+
+//     // Set the src attribute of the image
+//     img.src = slides[currentSlide].src;
+// }
+
+
+
+// //]
+
+
+
+
+//
+// for middle column
+
 //error (page reload fixed)[
 
 var slides = document.querySelectorAll('.slide');
@@ -103,8 +155,7 @@ for (var i = 1; i < slides.length; i++) {
     slides[i].style.display = 'none';
 }
 
-var slideInterval = setInterval(nextSlide, 2000); // Change slide every 2 seconds
-
+// Function to handle changing slides
 function nextSlide() {
     // Hide the current slide
     slides[currentSlide].style.display = 'none';
@@ -112,28 +163,41 @@ function nextSlide() {
     // Move to the next slide
     currentSlide = (currentSlide + 1) % slides.length;
 
-    // Create a new Image object
-    var img = new Image();
+    // Show the next slide
+    slides[currentSlide].style.display = 'block';
 
-    // Set up onload event handler to display the slide after image load
-    img.onload = function() {
-        // Show the slide after the image has loaded successfully
-        slides[currentSlide].style.display = 'block';
-    };
+    // Reset the slideInterval to prevent multiple intervals running concurrently
+    clearInterval(slideInterval);
 
-    // Set up onerror event handler to handle image loading errors
-    img.onerror = function(e) {
-        // If the image fails to load, prevent the default action (e.g., page reload)
-        e.preventDefault();
-        // Log the error for debugging purposes
-        console.error('Failed to load image:', slides[currentSlide].src);
-        // Move to the next slide
-        nextSlide();
-    };
-
-    // Set the src attribute of the image
-    img.src = slides[currentSlide].src;
+    // Set the slideInterval again after changing slides
+    slideInterval = setInterval(nextSlide, 2000);
 }
+
+// Initial call to nextSlide to start the slideshow
+nextSlide();
+
+// Event listener to handle window resize
+window.addEventListener('resize', function() {
+    // Reset the current slide to the first slide
+    currentSlide = 0;
+
+    // Hide all slides except the first one
+    for (var i = 0; i < slides.length; i++) {
+        slides[i].style.display = (i === currentSlide) ? 'block' : 'none';
+    }
+
+    // Reset the slideInterval
+    clearInterval(slideInterval);
+    slideInterval = setInterval(nextSlide, 2000);
+});
+
+// Event listener to handle errors (e.g., image loading errors)
+window.addEventListener('error', function(e) {
+    // Prevent the default action to avoid browser-specific error handling (e.g., page reload)
+    e.preventDefault();
+    // Log the error to the console for debugging purposes
+    console.error('Error occurred:', e.error);
+});
 
 
 
