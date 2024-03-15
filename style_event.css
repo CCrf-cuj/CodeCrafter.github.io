@@ -104,22 +104,20 @@
   }
   
   .About-column:hover {
-  background-color: rgba(149, 182, 201, 0.501); /* Red color on hover */
+  background-color: rgba(149, 182, 201, 0); /* Red color on hover */
   }
   
   .Middle-column {
     font-size: 18px;
     display: flex;
     flex-wrap:wrap;
-    grid-template-columns: 1fr 1fr;
-    justify-content: left;
-    align-items: flex-start;
+    justify-content: center;
     background-color: #f1f1f100;
     padding: 20px;
     margin-left : 20px;
   }
 
-.containt{
+/* .containt{
   display: flex;
   justify-content: center;
   align-items: center;
@@ -133,19 +131,16 @@
   border: #000000 0.1px solid;
   transition: background-color 1s ease;
   
-}
-.containt a{
-  color: black; /* Default color for the link */
-  text-decoration: none; /* Remove underline */
-}
-#date{
-  color:red;/* Default color for the link */
-  text-decoration: none; /* Remove underline */
+} */
+#link{
+  color: white; /* Default color for the link */
+  text-decoration: none;
 
 }
-.containt::after{
 
-}
+
+
+
   .Right-section {
     background-color: #f1f1f100;
     padding: 20px;
