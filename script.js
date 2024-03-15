@@ -201,3 +201,36 @@ window.addEventListener('error', function(e) {
 
 
 //]
+
+
+// Events.html
+
+
+// Fetch the content of the div from the source page
+            // fetch('events.html')
+            //     .then(response => response.text())
+            //     .then(html => {
+            //         // Create a temporary div to hold the content
+            //         const tempDiv = document.createElement('div');
+            //         tempDiv.innerHTML = html;
+    
+            //         // Get the content div from the temporary div
+            //         const contentDiv = tempDiv.querySelector('#data-table');
+    
+            //         // Append the content div to the destination page
+            //         document.getElementById('embeddedContent').appendChild(contentDiv);
+            //     });
+                // Fetch the content of the div from the source page
+                fetch("events.html")
+                .then(response => response.text())
+                .then(html => {
+                    // Create a temporary div to hold the content
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = html;
+    
+                    // Get the content div from the temporary div
+                    const contentDiv = tempDiv.querySelector('#data-table');
+    
+                    // Append the content div to the destination page
+                    document.getElementById('embeddedContent').appendChild(contentDiv);
+                });
