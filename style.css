@@ -106,7 +106,7 @@ transition: background-color 1s ease;
 }
 
 .About-column:hover {
-background-color: rgba(149, 182, 201, 0.501); /* Red color on hover */
+background-color: rgba(149, 182, 201, 0); 
 }
 
 .Middle-column {
