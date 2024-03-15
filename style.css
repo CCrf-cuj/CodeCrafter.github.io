@@ -46,6 +46,10 @@ body{
   justify-content: flex-end;
 }
 
+svg:hover {
+  
+  fill: initial;
+}
 
 .navbar a {
   color: rgb(0, 0, 0);
@@ -106,7 +110,7 @@ transition: background-color 1s ease;
 }
 
 .About-column:hover {
-background-color: rgba(149, 182, 201, 0); 
+background-color: rgba(149, 182, 201, 0); /* Red color on hover */
 }
 
 .Middle-column {
@@ -158,6 +162,7 @@ background-color: rgba(149, 182, 201, 0);
   background-color: #f1f1f100;
   padding: 20px;
 }
+
 
 /* Lower-section styles */
 .lower-section {
