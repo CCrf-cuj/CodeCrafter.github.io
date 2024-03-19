@@ -125,7 +125,7 @@ background-color: rgba(149, 182, 201, 0); /* Red color on hover */
 }
 #slideshow-container {
   position: relative;
-  max-width: 90%;
+  max-width: 100%;
   overflow: hidden;
   border: 10px solid #ccc; /* Border style with 10px width */
   border-radius: 8px; /* Rounded corners */
