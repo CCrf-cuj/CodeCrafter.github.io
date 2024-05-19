@@ -132,7 +132,7 @@ svg:hover {
 /* Middle-body styles */
 .middle-body {
   display: grid;
-  grid-template-columns: 1.3fr 3fr 1fr;
+  grid-template-columns: 1.2fr 3fr 1.5fr;
   gap: 20px;
   padding: 20px;
 }
